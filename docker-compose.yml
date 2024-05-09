@@ -1,0 +1,14 @@
+version: "3"
+services:
+  database:
+    image: postgres
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_DB=carford"
+    ports:
+      - 5441:5432
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+volumes:
+  pg-data:
